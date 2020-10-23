@@ -27,6 +27,7 @@ $(document).ready(function(){
     });
     function septJours(lat, lon){
         let i = jourCourant+1;
+        let j = 0;
         $.ajax({
             url: "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&appid=9440bfa82499acb03378ed9777363d93&units=metric",
     
@@ -42,7 +43,14 @@ $(document).ready(function(){
                 }
                 console.log(obj);
                 let urlImg = obj.weather[0].main;
-                $("#contentJourSemaine").html($("#contentJourSemaine").html() + "<div class='meteoJourSemaine'><img src='IMG/"+urlImg.toLowerCase()+".svg'><p>"+joursSemaine[i]+"</p><p>"+Math.round(obj.temp.day)+"</p></div>");
+                if(j == 0){
+                    $("#contentJourSemaine").html($("#contentJourSemaine").html() + "<div class='meteoJourSemaine bordureLeft'><img src='IMG/"+urlImg.toLowerCase()+".svg'><p>"+joursSemaine[i]+"</p><p>"+Math.round(obj.temp.day)+"</p></div>");
+                }else if(j == 7){
+                    $("#contentJourSemaine").html($("#contentJourSemaine").html() + "<div class='meteoJourSemaine bordureRight'><img src='IMG/"+urlImg.toLowerCase()+".svg'><p>"+joursSemaine[i]+"</p><p>"+Math.round(obj.temp.day)+"</p></div>");
+                }else{
+                    $("#contentJourSemaine").html($("#contentJourSemaine").html() + "<div class='meteoJourSemaine'><img src='IMG/"+urlImg.toLowerCase()+".svg'><p>"+joursSemaine[i]+"</p><p>"+Math.round(obj.temp.day)+"</p></div>");
+                }
+                j -=-1;
                 i -=-1;
 
             });
