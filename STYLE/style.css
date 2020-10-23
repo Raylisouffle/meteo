@@ -1,0 +1,115 @@
+*{
+    margin: unset;
+    font-family: 'Dosis', sans-serif;
+    border: unset;
+}
+body{
+    background: rgb(78,185,219);
+    background: linear-gradient(326deg, rgba(78,185,219,1) 0%, rgba(233,63,235,1) 100%); 
+    min-height: 100vh;
+}
+
+#search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    
+}
+
+input{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: unset;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    background-color: rgba(240, 248, 255, 0);
+    color: white;
+    font-weight: bold;
+    width: 30%;
+    transition: all 1.5s;
+}
+
+input:hover{
+    letter-spacing: 0.1em;
+}
+
+
+
+
+#content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+button{
+    background: rgba(37, 230, 143, 0);
+    cursor: pointer;
+    color: white;
+    height: 27.6px;
+    font-size: x-large;
+}
+
+h2{
+    margin-top: 10px;
+}
+
+#contentSemaine{
+    display: flex;
+    width: 48%;
+    margin: 50px 0px 50px 0px
+}
+
+#contentMeteo{
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.meteoJourSemaine{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    width: 16.66%;
+    padding-bottom: 5px;
+}
+
+.meteoJourSemaine img{
+    width: 50%;
+}
+
+
+#meteoJour{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1557323760/weather.svg) no-repeat center;
+    background-size: cover;
+}
+
+#meteoJour img{
+    width: 30%;
+    margin: 20px 0px 20px 0px;
+}
+
+#meteoJour p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#contentJourSemaine{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
